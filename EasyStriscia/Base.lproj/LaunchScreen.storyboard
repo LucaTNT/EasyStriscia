@@ -87,6 +87,27 @@
                                 <exclude reference="hki-Tl-AfO"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="jgD-Cx-WL7"/>
+                                <exclude reference="1Zr-kO-BsD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0JD-X9-dHb"/>
+                                <exclude reference="6w2-JJ-iVE"/>
+                                <include reference="B7L-e3-0Cf"/>
+                                <exclude reference="nvx-0x-3wC"/>
+                                <exclude reference="qXQ-nK-4ag"/>
+                                <include reference="gQA-li-7My"/>
+                                <exclude reference="2TS-4j-2VF"/>
+                                <include reference="3et-cU-8Au"/>
+                                <exclude reference="Ova-s8-AmB"/>
+                                <exclude reference="f9M-dM-QYj"/>
+                                <exclude reference="fzk-lJ-k6H"/>
+                                <include reference="h0g-0s-49R"/>
+                                <include reference="hki-Tl-AfO"/>
+                            </mask>
+                        </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <exclude reference="jgD-Cx-WL7"/>

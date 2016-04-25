@@ -19,6 +19,7 @@
 		81F577991CCE187E001526F6 /* Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577981CCE187E001526F6 /* Transparent.png */; };
 		81F5779D1CCE1899001526F6 /* btn_fede.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F5779B1CCE1899001526F6 /* btn_fede.png */; };
 		81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F5779C1CCE1899001526F6 /* btn_luca.png */; };
+		81F577A41CCE2654001526F6 /* Trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A31CCE2654001526F6 /* Trash.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		81F577981CCE187E001526F6 /* Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Transparent.png; sourceTree = "<group>"; };
 		81F5779B1CCE1899001526F6 /* btn_fede.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_fede.png; sourceTree = "<group>"; };
 		81F5779C1CCE1899001526F6 /* btn_luca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_luca.png; sourceTree = "<group>"; };
+		81F577A31CCE2654001526F6 /* Trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trash.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		81F577781CCE015A001526F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81F577A31CCE2654001526F6 /* Trash.png */,
 				81F5779A1CCE1899001526F6 /* Buttons */,
 				81F577981CCE187E001526F6 /* Transparent.png */,
 				81F577931CCE17E4001526F6 /* Facce */,
@@ -170,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F577A41CCE2654001526F6 /* Trash.png in Resources */,
 				81F577921CCE109D001526F6 /* Logo_EasyPodcast.png in Resources */,
 				81F577881CCE015A001526F6 /* LaunchScreen.storyboard in Resources */,
 				81F577971CCE17E4001526F6 /* Luca.png in Resources */,

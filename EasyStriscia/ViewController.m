@@ -75,6 +75,12 @@
     [self.touchTimer invalidate];
 }
 
+-(IBAction)emptyScreenshot
+{
+    self.screenshot.image = [UIImage imageNamed:@"Transparent.png"];
+    self.icon.hidden = YES;
+}
+
 
 - (UIImage *) captureScreen
 {
@@ -87,9 +93,9 @@
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();*/
     
-    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, [UIScreen mainScreen].scale);
+    UIGraphicsBeginImageContextWithOptions(self.screenshotArea.bounds.size, NO, [UIScreen mainScreen].scale);
     
-    [self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:NO];
+    [self.screenshotArea drawViewHierarchyInRect:self.screenshotArea.bounds afterScreenUpdates:NO];
     
     // old style [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     
