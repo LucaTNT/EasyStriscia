@@ -318,7 +318,7 @@
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.EasyStriscia;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.easystriscia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -331,7 +331,7 @@
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.EasyStriscia;
+				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.easystriscia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -355,6 +355,7 @@
 				81F5778E1CCE015A001526F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
