@@ -42,6 +42,20 @@
                                     <constraint firstItem="vMQ-L1-Hoy" firstAttribute="centerY" secondItem="UsL-Uq-jgG" secondAttribute="centerY" id="xuh-Q9-Tjc"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disegna con il dito" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="RxR-V4-c7x">
+                                <rect key="frame" x="20" y="271" width="568" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="hVf-Lz-sXv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" red="0.32954001910000003" green="0.32954001910000003" blue="0.32954001910000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="220" y="371" width="360" height="58"/>
+                                </variation>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-dB-qaJ" userLabel="Faces">
                                 <rect key="frame" x="0.0" y="468" width="600" height="116"/>
                                 <subviews>
@@ -104,7 +118,7 @@
                                     <action selector="emptyScreenshot" destination="BYZ-38-t0r" eventType="touchUpInside" id="KO8-5x-dbZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-I9-22G" userLabel="Share">
+                            <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-I9-22G" userLabel="Share">
                                 <rect key="frame" x="20" y="20" width="28" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="SYX-3K-8c1"/>
@@ -119,20 +133,30 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="4Be-CJ-tob"/>
+                            <constraint firstItem="RxR-V4-c7x" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8I2-Wz-BJO"/>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIa-VB-ovO"/>
                             <constraint firstItem="3Nd-I9-22G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ece-Bc-qou"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="RxR-V4-c7x" secondAttribute="leading" id="Ekl-aJ-NCn"/>
                             <constraint firstItem="3Nd-I9-22G" firstAttribute="height" secondItem="R5c-cY-V8m" secondAttribute="height" id="Fzb-DL-4Ij"/>
                             <constraint firstItem="Lvf-dB-qaJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="R1p-6k-GxV"/>
                             <constraint firstItem="3Nd-I9-22G" firstAttribute="centerY" secondItem="R5c-cY-V8m" secondAttribute="centerY" id="SZF-ZC-JfK"/>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TZL-hW-4YK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RxR-V4-c7x" secondAttribute="trailingMargin" id="X1I-Wp-JRm"/>
                             <constraint firstItem="R5c-cY-V8m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fkt-d2-Uk2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lvf-dB-qaJ" secondAttribute="bottom" constant="16" id="fr0-gS-b1F"/>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="iyz-NV-okd"/>
+                            <constraint firstItem="RxR-V4-c7x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lwN-o1-mzn"/>
                             <constraint firstAttribute="trailing" secondItem="R5c-cY-V8m" secondAttribute="trailing" constant="8" id="rD3-3h-tFZ"/>
                             <constraint firstItem="Lvf-dB-qaJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zMQ-pi-D1a"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8I2-Wz-BJO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="explainationLabel" destination="RxR-V4-c7x" id="ubb-wV-Eqm"/>
                         <outlet property="icon" destination="KDM-dO-iFV" id="k5b-k2-XxZ"/>
                         <outlet property="screenshot" destination="vMQ-L1-Hoy" id="Gcd-r4-rLa"/>
                         <outlet property="screenshotArea" destination="UsL-Uq-jgG" id="eqA-Nd-G6u"/>

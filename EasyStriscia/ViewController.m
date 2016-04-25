@@ -29,12 +29,26 @@
 {
     self.icon.hidden = NO;
     self.shareButton.enabled = YES;
+    
+    [self fadeLabelToAlpha:0.0];
 
     UITouch *touched = [userData userInfo];
     CGPoint location = [touched locationInView:touched.view];
     
     // Move the image
     self.icon.center = location;
+    
+}
+
+-(void)fadeLabelToAlpha:(float)alpha
+{
+    if (self.explainationLabel.alpha != alpha)
+    {
+        [UILabel beginAnimations:NULL context:nil];
+        [UILabel setAnimationDuration:0.2];
+        [self.explainationLabel setAlpha:alpha];
+        [UILabel commitAnimations];
+    }
 }
 
 - (IBAction)shareImage:(id)sender
@@ -90,6 +104,7 @@
     self.screenshot.image = [UIImage imageNamed:@"Transparent.png"];
     self.icon.hidden = YES;
     self.shareButton.enabled = NO;
+    [self fadeLabelToAlpha:0.5];
 }
 
 
