@@ -16,14 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"LOADED");
-
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -35,33 +32,35 @@
 
     UITouch *touched = [userData userInfo];
     CGPoint location = [touched locationInView:touched.view];
-    NSLog(@"Boosting x=%.2f y=%.2f", location.x, location.y);
-    self.icon.center = location;
     
+    // Move the image
+    self.icon.center = location;
 }
 
-- (IBAction)shareImage:(id)sender {
+- (IBAction)shareImage:(id)sender
+{
     NSMutableArray *sharingItems = [NSMutableArray new];
 
     [sharingItems addObject:self.screenshot.image];
     
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];
-    activityController.popoverPresentationController.sourceView = self.view;
+    
+    // Ugly hack to position popover
+    UIView *popoverView = [[UIView alloc]initWithFrame:CGRectMake(self.shareButton.imageView.bounds.origin.x*3, self.shareButton.imageView.bounds.origin.y + self.shareButton.imageView.bounds.size.height*1.2, 1, 1)];
+    [self.shareButton.imageView addSubview:popoverView];
+    
+    activityController.popoverPresentationController.sourceView = popoverView;
+    
     [self presentViewController:activityController animated:YES completion:nil];
 }
 
 -(void)handleTouchEvent:(UIEvent *)event
 {
     [self captureScreen];
-    //NSLog(@"moved");
-    // First we need to trigger a boost in case the screen was just touched.
     UITouch *touched = [[event allTouches] anyObject];
     
-    
-    
-    //set a timer to keep boosting if the touch continues.
-    //Also check there isn't already a timer running for this.
-    if (!self.touchTimer.isValid) {
+    if (!self.touchTimer.isValid)
+    {
         self.touchTimer = [NSTimer scheduledTimerWithTimeInterval:0.0167 target:self selector:@selector(moveImage:) userInfo:touched repeats:YES];
     }
 }
@@ -71,17 +70,18 @@
     [self handleTouchEvent:event];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
     [self handleTouchEvent:event];
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"edned");
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
     [self.touchTimer invalidate];
 }
 
--(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"cancelled");
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
     [self.touchTimer invalidate];
 }
 
@@ -93,33 +93,23 @@
 }
 
 
-- (UIImage *) captureScreen
+-(void)captureScreen
 {
-    /*
-    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
-    CGRect rect = [keyWindow bounds];
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [keyWindow.layer renderInContext:context];
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();*/
     
     UIGraphicsBeginImageContextWithOptions(self.screenshotArea.bounds.size, NO, [UIScreen mainScreen].scale);
     
     [self.screenshotArea drawViewHierarchyInRect:self.screenshotArea.bounds afterScreenUpdates:NO];
     
-    // old style [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-    
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     self.screenshot.image = img;
-    
-    return img;
 }
 
-- (IBAction)changeImage:(UIButton *)sender {
+- (IBAction)changeImage:(UIButton *)sender
+{
     self.icon.hidden = YES;
+    
     switch (sender.tag)
     {
         case 1:
