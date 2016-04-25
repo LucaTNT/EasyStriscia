@@ -31,6 +31,7 @@
 -(void)moveImage:(NSTimer*)userData
 {
     self.icon.hidden = NO;
+    self.shareButton.enabled = YES;
 
     UITouch *touched = [userData userInfo];
     CGPoint location = [touched locationInView:touched.view];
@@ -39,6 +40,15 @@
     
 }
 
+- (IBAction)shareImage:(id)sender {
+    NSMutableArray *sharingItems = [NSMutableArray new];
+
+    [sharingItems addObject:self.screenshot.image];
+    
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:sharingItems applicationActivities:nil];
+    activityController.popoverPresentationController.sourceView = self.view;
+    [self presentViewController:activityController animated:YES completion:nil];
+}
 
 -(void)handleTouchEvent:(UIEvent *)event
 {
@@ -79,6 +89,7 @@
 {
     self.screenshot.image = [UIImage imageNamed:@"Transparent.png"];
     self.icon.hidden = YES;
+    self.shareButton.enabled = NO;
 }
 
 

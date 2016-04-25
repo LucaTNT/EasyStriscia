@@ -20,6 +20,7 @@
 		81F5779D1CCE1899001526F6 /* btn_fede.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F5779B1CCE1899001526F6 /* btn_fede.png */; };
 		81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F5779C1CCE1899001526F6 /* btn_luca.png */; };
 		81F577A41CCE2654001526F6 /* Trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A31CCE2654001526F6 /* Trash.png */; };
+		81F577A61CCE2EB3001526F6 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A51CCE2EB3001526F6 /* share.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		81F5779B1CCE1899001526F6 /* btn_fede.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_fede.png; sourceTree = "<group>"; };
 		81F5779C1CCE1899001526F6 /* btn_luca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_luca.png; sourceTree = "<group>"; };
 		81F577A31CCE2654001526F6 /* Trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trash.png; sourceTree = "<group>"; };
+		81F577A51CCE2EB3001526F6 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		81F577781CCE015A001526F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81F577A51CCE2EB3001526F6 /* share.png */,
 				81F577A31CCE2654001526F6 /* Trash.png */,
 				81F5779A1CCE1899001526F6 /* Buttons */,
 				81F577981CCE187E001526F6 /* Transparent.png */,
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					81F577741CCE015A001526F6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = V8U8RVA64V;
 					};
 				};
 			};
@@ -177,6 +181,7 @@
 				81F577921CCE109D001526F6 /* Logo_EasyPodcast.png in Resources */,
 				81F577881CCE015A001526F6 /* LaunchScreen.storyboard in Resources */,
 				81F577971CCE17E4001526F6 /* Luca.png in Resources */,
+				81F577A61CCE2EB3001526F6 /* share.png in Resources */,
 				81F577991CCE187E001526F6 /* Transparent.png in Resources */,
 				81F577961CCE17E4001526F6 /* Fede.png in Resources */,
 				81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */,
@@ -309,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -321,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

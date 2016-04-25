@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,15 +22,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UsL-Uq-jgG" userLabel="ScreenshotArea">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMQ-L1-Hoy">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                    </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Luca.png" translatesAutoresizingMaskIntoConstraints="NO" id="KDM-dO-iFV">
                                         <rect key="frame" x="268" y="268" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="KDM-dO-iFV" secondAttribute="height" id="Mii-hC-vov"/>
                                             <constraint firstAttribute="width" constant="64" id="oX9-cr-1wL"/>
                                         </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMQ-L1-Hoy">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -100,13 +101,26 @@
                                     <action selector="emptyScreenshot" destination="BYZ-38-t0r" eventType="touchUpInside" id="KO8-5x-dbZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-I9-22G" userLabel="Share">
+                                <rect key="frame" x="20" y="20" width="31" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="SYX-3K-8c1"/>
+                                </constraints>
+                                <state key="normal" image="share.png"/>
+                                <connections>
+                                    <action selector="shareImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5o-v9-H2E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="4Be-CJ-tob"/>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIa-VB-ovO"/>
+                            <constraint firstItem="3Nd-I9-22G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ece-Bc-qou"/>
+                            <constraint firstItem="3Nd-I9-22G" firstAttribute="height" secondItem="R5c-cY-V8m" secondAttribute="height" id="Fzb-DL-4Ij"/>
                             <constraint firstItem="Lvf-dB-qaJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="R1p-6k-GxV"/>
+                            <constraint firstItem="3Nd-I9-22G" firstAttribute="centerY" secondItem="R5c-cY-V8m" secondAttribute="centerY" id="SZF-ZC-JfK"/>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TZL-hW-4YK"/>
                             <constraint firstItem="R5c-cY-V8m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fkt-d2-Uk2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lvf-dB-qaJ" secondAttribute="bottom" constant="16" id="fr0-gS-b1F"/>
@@ -119,6 +133,7 @@
                         <outlet property="icon" destination="KDM-dO-iFV" id="k5b-k2-XxZ"/>
                         <outlet property="screenshot" destination="vMQ-L1-Hoy" id="Gcd-r4-rLa"/>
                         <outlet property="screenshotArea" destination="UsL-Uq-jgG" id="eqA-Nd-G6u"/>
+                        <outlet property="shareButton" destination="3Nd-I9-22G" id="dL0-dA-3gI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,5 +146,6 @@
         <image name="Trash.png" width="64" height="85"/>
         <image name="btn_fede.png" width="232" height="232"/>
         <image name="btn_luca.png" width="232" height="232"/>
+        <image name="share.png" width="38" height="53"/>
     </resources>
 </document>

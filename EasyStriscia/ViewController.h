@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
 @property (weak, nonatomic) IBOutlet UIImageView *screenshot;
 @property (weak, nonatomic) IBOutlet UIView *screenshotArea;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 
 
