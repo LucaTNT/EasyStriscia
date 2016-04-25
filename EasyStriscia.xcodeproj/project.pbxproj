@@ -13,6 +13,12 @@
 		81F577831CCE015A001526F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F577811CCE015A001526F6 /* Main.storyboard */; };
 		81F577851CCE015A001526F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F577841CCE015A001526F6 /* Assets.xcassets */; };
 		81F577881CCE015A001526F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F577861CCE015A001526F6 /* LaunchScreen.storyboard */; };
+		81F577921CCE109D001526F6 /* Logo_EasyPodcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577911CCE109D001526F6 /* Logo_EasyPodcast.png */; };
+		81F577961CCE17E4001526F6 /* Fede.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577941CCE17E4001526F6 /* Fede.png */; };
+		81F577971CCE17E4001526F6 /* Luca.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577951CCE17E4001526F6 /* Luca.png */; };
+		81F577991CCE187E001526F6 /* Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577981CCE187E001526F6 /* Transparent.png */; };
+		81F5779D1CCE1899001526F6 /* btn_fede.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F5779B1CCE1899001526F6 /* btn_fede.png */; };
+		81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F5779C1CCE1899001526F6 /* btn_luca.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		81F577841CCE015A001526F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81F577871CCE015A001526F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81F577891CCE015A001526F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81F577911CCE109D001526F6 /* Logo_EasyPodcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_EasyPodcast.png; sourceTree = "<group>"; };
+		81F577941CCE17E4001526F6 /* Fede.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fede.png; sourceTree = "<group>"; };
+		81F577951CCE17E4001526F6 /* Luca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Luca.png; sourceTree = "<group>"; };
+		81F577981CCE187E001526F6 /* Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Transparent.png; sourceTree = "<group>"; };
+		81F5779B1CCE1899001526F6 /* btn_fede.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_fede.png; sourceTree = "<group>"; };
+		81F5779C1CCE1899001526F6 /* btn_luca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_luca.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +86,31 @@
 		81F577781CCE015A001526F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81F5779A1CCE1899001526F6 /* Buttons */,
+				81F577981CCE187E001526F6 /* Transparent.png */,
+				81F577931CCE17E4001526F6 /* Facce */,
+				81F577911CCE109D001526F6 /* Logo_EasyPodcast.png */,
 				81F577791CCE015A001526F6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81F577931CCE17E4001526F6 /* Facce */ = {
+			isa = PBXGroup;
+			children = (
+				81F577941CCE17E4001526F6 /* Fede.png */,
+				81F577951CCE17E4001526F6 /* Luca.png */,
+			);
+			path = Facce;
+			sourceTree = "<group>";
+		};
+		81F5779A1CCE1899001526F6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				81F5779B1CCE1899001526F6 /* btn_fede.png */,
+				81F5779C1CCE1899001526F6 /* btn_luca.png */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +170,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F577921CCE109D001526F6 /* Logo_EasyPodcast.png in Resources */,
 				81F577881CCE015A001526F6 /* LaunchScreen.storyboard in Resources */,
+				81F577971CCE17E4001526F6 /* Luca.png in Resources */,
+				81F577991CCE187E001526F6 /* Transparent.png in Resources */,
+				81F577961CCE17E4001526F6 /* Fede.png in Resources */,
+				81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */,
 				81F577851CCE015A001526F6 /* Assets.xcassets in Resources */,
+				81F5779D1CCE1899001526F6 /* btn_fede.png in Resources */,
 				81F577831CCE015A001526F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.EasyStriscia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -277,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.EasyStriscia;
 				PRODUCT_NAME = "$(TARGET_NAME)";

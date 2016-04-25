@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -12,11 +16,86 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="hFb-c7-Pxp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo_EasyPodcast.png" translatesAutoresizingMaskIntoConstraints="NO" id="bkc-Wz-Sy2">
+                                <rect key="frame" x="11" y="20" width="580" height="580"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bkc-Wz-Sy2" secondAttribute="height" multiplier="1:1" id="QEy-L6-xN9"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="20" width="380" height="380"/>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zr-kO-BsD" userLabel="Above">
+                                <rect key="frame" x="0.0" y="600" width="600" height="0.0"/>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="400" width="800" height="0.0"/>
+                                </variation>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EasyStriscia" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="SZo-fp-xhq">
+                                <rect key="frame" x="109" y="600" width="382" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="0Ya-Lv-axG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" red="0.32954001910000003" green="0.32954001910000003" blue="0.32954001910000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Ya-Lv-axG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="275" y="400" width="250" height="0.0"/>
+                                </variation>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgD-Cx-WL7" userLabel="Below">
+                                <rect key="frame" x="0.0" y="600" width="600" height="0.0"/>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="400" width="800" height="0.0"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bkc-Wz-Sy2" firstAttribute="bottom" secondItem="1Zr-kO-BsD" secondAttribute="top" id="0JD-X9-dHb"/>
+                            <constraint firstItem="SZo-fp-xhq" firstAttribute="top" secondItem="1Zr-kO-BsD" secondAttribute="bottom" id="2TS-4j-2VF"/>
+                            <constraint firstItem="bkc-Wz-Sy2" firstAttribute="width" secondItem="hFb-c7-Pxp" secondAttribute="width" id="6w2-JJ-iVE"/>
+                            <constraint firstItem="bkc-Wz-Sy2" firstAttribute="leading" secondItem="hFb-c7-Pxp" secondAttribute="leadingMargin" id="B7L-e3-0Cf"/>
+                            <constraint firstItem="SZo-fp-xhq" firstAttribute="width" secondItem="bkc-Wz-Sy2" secondAttribute="width" multiplier="0.66" id="Ova-s8-AmB" userLabel="EasyPodcast.width = 0.66 × LOGO.width"/>
+                            <constraint firstItem="jgD-Cx-WL7" firstAttribute="width" secondItem="1Zr-kO-BsD" secondAttribute="width" id="OxS-ov-fle"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jgD-Cx-WL7" secondAttribute="bottom" id="R21-29-m9o"/>
+                            <constraint firstItem="SZo-fp-xhq" firstAttribute="bottom" secondItem="jgD-Cx-WL7" secondAttribute="top" id="f9M-dM-QYj"/>
+                            <constraint firstItem="SZo-fp-xhq" firstAttribute="centerX" secondItem="hFb-c7-Pxp" secondAttribute="centerX" id="fzk-lJ-k6H"/>
+                            <constraint firstItem="jgD-Cx-WL7" firstAttribute="height" secondItem="1Zr-kO-BsD" secondAttribute="height" id="iRB-oF-FOv"/>
+                            <constraint firstItem="1Zr-kO-BsD" firstAttribute="centerX" secondItem="hFb-c7-Pxp" secondAttribute="centerX" id="jBR-9k-M0I"/>
+                            <constraint firstItem="bkc-Wz-Sy2" firstAttribute="centerX" secondItem="hFb-c7-Pxp" secondAttribute="centerX" id="nvx-0x-3wC" userLabel="LOGO: center horizontally"/>
+                            <constraint firstItem="1Zr-kO-BsD" firstAttribute="width" secondItem="hFb-c7-Pxp" secondAttribute="width" id="vQG-wy-uSj"/>
+                            <constraint firstItem="bkc-Wz-Sy2" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="vxY-RD-5Kf" userLabel="LOGO: spacing from top"/>
+                            <constraint firstItem="jgD-Cx-WL7" firstAttribute="centerX" secondItem="hFb-c7-Pxp" secondAttribute="centerX" id="zpl-Gl-dtn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B7L-e3-0Cf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="6w2-JJ-iVE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="6w2-JJ-iVE"/>
+                                <include reference="B7L-e3-0Cf"/>
+                                <exclude reference="2TS-4j-2VF"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +103,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo_EasyPodcast.png" width="1424" height="1424"/>
+    </resources>
 </document>

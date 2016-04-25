@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, retain, readwrite) NSTimer *touchTimer;
+@property (weak, nonatomic) IBOutlet UIImageView *icon;
+@property (weak, nonatomic) IBOutlet UIImageView *screenshot;
+
+
 
 @end
 
