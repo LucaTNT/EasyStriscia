@@ -95,7 +95,6 @@
 
 -(void)captureScreen
 {
-    
     UIGraphicsBeginImageContextWithOptions(self.screenshotArea.bounds.size, NO, [UIScreen mainScreen].scale);
     
     [self.screenshotArea drawViewHierarchyInRect:self.screenshotArea.bounds afterScreenUpdates:NO];

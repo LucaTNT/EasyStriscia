@@ -13,7 +13,6 @@
 		81F577831CCE015A001526F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F577811CCE015A001526F6 /* Main.storyboard */; };
 		81F577851CCE015A001526F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F577841CCE015A001526F6 /* Assets.xcassets */; };
 		81F577881CCE015A001526F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F577861CCE015A001526F6 /* LaunchScreen.storyboard */; };
-		81F577921CCE109D001526F6 /* Logo_EasyPodcast.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577911CCE109D001526F6 /* Logo_EasyPodcast.png */; };
 		81F577961CCE17E4001526F6 /* Fede.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577941CCE17E4001526F6 /* Fede.png */; };
 		81F577971CCE17E4001526F6 /* Luca.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577951CCE17E4001526F6 /* Luca.png */; };
 		81F577991CCE187E001526F6 /* Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577981CCE187E001526F6 /* Transparent.png */; };
@@ -21,6 +20,7 @@
 		81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F5779C1CCE1899001526F6 /* btn_luca.png */; };
 		81F577A41CCE2654001526F6 /* Trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A31CCE2654001526F6 /* Trash.png */; };
 		81F577A61CCE2EB3001526F6 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A51CCE2EB3001526F6 /* share.png */; };
+		81F577AA1CCE3AFF001526F6 /* Logo_Striscia.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A91CCE3AFF001526F6 /* Logo_Striscia.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		81F577841CCE015A001526F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81F577871CCE015A001526F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81F577891CCE015A001526F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81F577911CCE109D001526F6 /* Logo_EasyPodcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_EasyPodcast.png; sourceTree = "<group>"; };
 		81F577941CCE17E4001526F6 /* Fede.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fede.png; sourceTree = "<group>"; };
 		81F577951CCE17E4001526F6 /* Luca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Luca.png; sourceTree = "<group>"; };
 		81F577981CCE187E001526F6 /* Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Transparent.png; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		81F5779C1CCE1899001526F6 /* btn_luca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_luca.png; sourceTree = "<group>"; };
 		81F577A31CCE2654001526F6 /* Trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trash.png; sourceTree = "<group>"; };
 		81F577A51CCE2EB3001526F6 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		81F577A91CCE3AFF001526F6 /* Logo_Striscia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_Striscia.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +90,12 @@
 		81F577781CCE015A001526F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81F577A91CCE3AFF001526F6 /* Logo_Striscia.png */,
 				81F577A51CCE2EB3001526F6 /* share.png */,
 				81F577A31CCE2654001526F6 /* Trash.png */,
 				81F5779A1CCE1899001526F6 /* Buttons */,
 				81F577981CCE187E001526F6 /* Transparent.png */,
 				81F577931CCE17E4001526F6 /* Facce */,
-				81F577911CCE109D001526F6 /* Logo_EasyPodcast.png */,
 				81F577791CCE015A001526F6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -178,12 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81F577A41CCE2654001526F6 /* Trash.png in Resources */,
-				81F577921CCE109D001526F6 /* Logo_EasyPodcast.png in Resources */,
 				81F577881CCE015A001526F6 /* LaunchScreen.storyboard in Resources */,
 				81F577971CCE17E4001526F6 /* Luca.png in Resources */,
 				81F577A61CCE2EB3001526F6 /* share.png in Resources */,
 				81F577991CCE187E001526F6 /* Transparent.png in Resources */,
 				81F577961CCE17E4001526F6 /* Fede.png in Resources */,
+				81F577AA1CCE3AFF001526F6 /* Logo_Striscia.png in Resources */,
 				81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */,
 				81F577851CCE015A001526F6 /* Assets.xcassets in Resources */,
 				81F5779D1CCE1899001526F6 /* btn_fede.png in Resources */,

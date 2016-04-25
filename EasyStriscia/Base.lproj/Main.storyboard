@@ -22,15 +22,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UsL-Uq-jgG" userLabel="ScreenshotArea">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMQ-L1-Hoy">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Luca.png" translatesAutoresizingMaskIntoConstraints="NO" id="KDM-dO-iFV">
                                         <rect key="frame" x="268" y="268" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="KDM-dO-iFV" secondAttribute="height" id="Mii-hC-vov"/>
                                             <constraint firstAttribute="width" constant="64" id="oX9-cr-1wL"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMQ-L1-Hoy">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -48,16 +48,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Que-I9-CQL" userLabel="Left">
                                         <rect key="frame" x="0.0" y="0.0" width="179" height="116"/>
                                     </view>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMS-eZ-5M6" userLabel="BTN Luca">
-                                        <rect key="frame" x="179" y="0.0" width="116" height="116"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="fMS-eZ-5M6" secondAttribute="height" multiplier="1:1" id="3iG-he-lIP"/>
-                                        </constraints>
-                                        <state key="normal" image="btn_luca.png"/>
-                                        <connections>
-                                            <action selector="changeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BS3-Rg-mGC"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZm-XR-W2x" userLabel="BTN Fede">
                                         <rect key="frame" x="305" y="0.0" width="116" height="116"/>
                                         <constraints>
@@ -71,6 +61,19 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddA-uI-SE0" userLabel="Right">
                                         <rect key="frame" x="421" y="0.0" width="179" height="116"/>
                                     </view>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMS-eZ-5M6" userLabel="BTN Luca">
+                                        <rect key="frame" x="179" y="0.0" width="116" height="116"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fMS-eZ-5M6" secondAttribute="height" multiplier="1:1" id="3iG-he-lIP"/>
+                                        </constraints>
+                                        <state key="normal" image="btn_luca.png"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="181" y="0.0" width="116" height="116"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="changeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BS3-Rg-mGC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ddA-uI-SE0" firstAttribute="leading" secondItem="iZm-XR-W2x" secondAttribute="trailing" id="2x7-Qf-Ou0"/>
@@ -102,7 +105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-I9-22G" userLabel="Share">
-                                <rect key="frame" x="20" y="20" width="31" height="43"/>
+                                <rect key="frame" x="20" y="20" width="28" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="28" id="SYX-3K-8c1"/>
                                 </constraints>
