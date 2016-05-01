@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIView *screenshotArea;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UILabel *explainationLabel;
+@property (nonatomic) BOOL imageHasChanged;
+@property (nonatomic, retain) NSString *currentImage;
 
 
 

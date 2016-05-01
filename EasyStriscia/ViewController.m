@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.imageHasChanged = NO;
+    self.currentImage = @"Luca.png";
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,6 +37,12 @@
 
     UITouch *touched = [userData userInfo];
     CGPoint location = [touched locationInView:touched.view];
+    
+    if (self.imageHasChanged)
+    {
+        self.icon.image = [UIImage imageNamed:self.currentImage];
+        self.imageHasChanged = NO;
+    }
     
     // Move the image
     self.icon.center = location;
@@ -121,19 +130,17 @@
 }
 
 - (IBAction)changeImage:(UIButton *)sender
-{
-    self.icon.hidden = YES;
-    
+{    
     switch (sender.tag)
     {
         case 1:
-            NSLog(@"Changed to Luca");
-            self.icon.image = [UIImage imageNamed:@"Luca.png"];
+            self.currentImage = @"Luca.png";
+            self.imageHasChanged = YES;
             break;
             
         case 2:
-            NSLog(@"Changed to Fede");
-            self.icon.image = [UIImage imageNamed:@"Fede.png"];
+            self.currentImage = @"Fede.png";
+            self.imageHasChanged = YES;
             break;
             
         default:
