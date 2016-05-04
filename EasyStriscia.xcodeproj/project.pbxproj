@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		81F5777A1CCE015A001526F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F577791CCE015A001526F6 /* main.m */; };
 		81F5777D1CCE015A001526F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5777C1CCE015A001526F6 /* AppDelegate.m */; };
-		81F577801CCE015A001526F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5777F1CCE015A001526F6 /* ViewController.m */; };
+		81F577801CCE015A001526F6 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F5777F1CCE015A001526F6 /* DrawViewController.m */; };
 		81F577831CCE015A001526F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F577811CCE015A001526F6 /* Main.storyboard */; };
 		81F577851CCE015A001526F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F577841CCE015A001526F6 /* Assets.xcassets */; };
 		81F577881CCE015A001526F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F577861CCE015A001526F6 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,9 @@
 		81F577A41CCE2654001526F6 /* Trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A31CCE2654001526F6 /* Trash.png */; };
 		81F577A61CCE2EB3001526F6 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A51CCE2EB3001526F6 /* share.png */; };
 		81F577AA1CCE3AFF001526F6 /* Logo_Striscia.png in Resources */ = {isa = PBXBuildFile; fileRef = 81F577A91CCE3AFF001526F6 /* Logo_Striscia.png */; };
+		99B0635D1CDA6A0F00325A4A /* BezierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0635C1CDA6A0F00325A4A /* BezierViewController.swift */; };
+		99B063691CDA7FEC00325A4A /* bezier.png in Resources */ = {isa = PBXBuildFile; fileRef = 99B063671CDA7FEC00325A4A /* bezier.png */; };
+		99B0636A1CDA7FEC00325A4A /* draw.png in Resources */ = {isa = PBXBuildFile; fileRef = 99B063681CDA7FEC00325A4A /* draw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,7 @@
 		81F5777B1CCE015A001526F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81F5777C1CCE015A001526F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		81F5777E1CCE015A001526F6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		81F5777F1CCE015A001526F6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		81F5777F1CCE015A001526F6 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		81F577821CCE015A001526F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81F577841CCE015A001526F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81F577871CCE015A001526F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +45,10 @@
 		81F577A31CCE2654001526F6 /* Trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trash.png; sourceTree = "<group>"; };
 		81F577A51CCE2EB3001526F6 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		81F577A91CCE3AFF001526F6 /* Logo_Striscia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_Striscia.png; sourceTree = "<group>"; };
+		99B0635C1CDA6A0F00325A4A /* BezierViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierViewController.swift; sourceTree = "<group>"; };
+		99B0635E1CDA72B300325A4A /* EasyStriscia-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyStriscia-Bridging-Header.h"; sourceTree = "<group>"; };
+		99B063671CDA7FEC00325A4A /* bezier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bezier.png; sourceTree = "<group>"; };
+		99B063681CDA7FEC00325A4A /* draw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = draw.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +84,8 @@
 				81F5777B1CCE015A001526F6 /* AppDelegate.h */,
 				81F5777C1CCE015A001526F6 /* AppDelegate.m */,
 				81F5777E1CCE015A001526F6 /* ViewController.h */,
-				81F5777F1CCE015A001526F6 /* ViewController.m */,
+				81F5777F1CCE015A001526F6 /* DrawViewController.m */,
+				99B0635C1CDA6A0F00325A4A /* BezierViewController.swift */,
 				81F577811CCE015A001526F6 /* Main.storyboard */,
 				81F577841CCE015A001526F6 /* Assets.xcassets */,
 				81F577861CCE015A001526F6 /* LaunchScreen.storyboard */,
@@ -93,10 +101,12 @@
 				81F577A91CCE3AFF001526F6 /* Logo_Striscia.png */,
 				81F577A51CCE2EB3001526F6 /* share.png */,
 				81F577A31CCE2654001526F6 /* Trash.png */,
+				99B063661CDA7FEC00325A4A /* Tab Icons */,
 				81F5779A1CCE1899001526F6 /* Buttons */,
 				81F577981CCE187E001526F6 /* Transparent.png */,
 				81F577931CCE17E4001526F6 /* Facce */,
 				81F577791CCE015A001526F6 /* main.m */,
+				99B0635E1CDA72B300325A4A /* EasyStriscia-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +127,15 @@
 				81F5779C1CCE1899001526F6 /* btn_luca.png */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		99B063661CDA7FEC00325A4A /* Tab Icons */ = {
+			isa = PBXGroup;
+			children = (
+				99B063671CDA7FEC00325A4A /* bezier.png */,
+				99B063681CDA7FEC00325A4A /* draw.png */,
+			);
+			path = "Tab Icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +202,8 @@
 				81F577A61CCE2EB3001526F6 /* share.png in Resources */,
 				81F577991CCE187E001526F6 /* Transparent.png in Resources */,
 				81F577961CCE17E4001526F6 /* Fede.png in Resources */,
+				99B0636A1CDA7FEC00325A4A /* draw.png in Resources */,
+				99B063691CDA7FEC00325A4A /* bezier.png in Resources */,
 				81F577AA1CCE3AFF001526F6 /* Logo_Striscia.png in Resources */,
 				81F5779E1CCE1899001526F6 /* btn_luca.png in Resources */,
 				81F577851CCE015A001526F6 /* Assets.xcassets in Resources */,
@@ -198,7 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81F577801CCE015A001526F6 /* ViewController.m in Sources */,
+				99B0635D1CDA6A0F00325A4A /* BezierViewController.swift in Sources */,
+				81F577801CCE015A001526F6 /* DrawViewController.m in Sources */,
 				81F5777D1CCE015A001526F6 /* AppDelegate.m in Sources */,
 				81F5777A1CCE015A001526F6 /* main.m in Sources */,
 			);
@@ -314,12 +336,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.easystriscia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyStriscia/EasyStriscia-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -327,12 +352,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EasyStriscia/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.lucazorzi.easystriscia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyStriscia/EasyStriscia-Bridging-Header.h";
 			};
 			name = Release;
 		};

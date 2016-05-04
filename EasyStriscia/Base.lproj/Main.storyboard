@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dSu-3o-tqf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,10 +7,73 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bezier-->
+        <scene sceneID="eZo-0y-Xnr">
+            <objects>
+                <viewController title="Bezier" id="YMX-tR-hVz" customClass="BezierViewController" customModule="EasyStriscia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zzn-0q-lH6"/>
+                        <viewControllerLayoutGuide type="bottom" id="pBo-RL-dil"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gbv-1n-WUU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="70" translatesAutoresizingMaskIntoConstraints="NO" id="S5g-Vu-Fqq">
+                                <rect key="frame" x="38" y="467" width="524" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcN-nO-DeT">
+                                <rect key="frame" x="40" y="498" width="520" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Sciame di EasyFacce!!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateButtonPressed:" destination="YMX-tR-hVz" eventType="touchUpInside" id="1le-ou-1rX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DcN-nO-DeT" firstAttribute="top" secondItem="S5g-Vu-Fqq" secondAttribute="bottom" constant="1" id="7gD-17-9tN"/>
+                            <constraint firstItem="S5g-Vu-Fqq" firstAttribute="leading" secondItem="Gbv-1n-WUU" secondAttribute="leadingMargin" constant="20" id="80W-ls-N97"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S5g-Vu-Fqq" secondAttribute="trailing" constant="20" id="cXM-M2-zxe"/>
+                            <constraint firstItem="pBo-RL-dil" firstAttribute="top" secondItem="DcN-nO-DeT" secondAttribute="bottom" constant="23" id="mxn-Ms-8JB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DcN-nO-DeT" secondAttribute="trailing" constant="20" id="wgK-OW-N0g"/>
+                            <constraint firstItem="DcN-nO-DeT" firstAttribute="leading" secondItem="Gbv-1n-WUU" secondAttribute="leadingMargin" constant="20" id="xXu-jZ-vEo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="EasySciame" image="bezier.png" id="fCl-P5-8QK" userLabel="Bezier"/>
+                    <connections>
+                        <outlet property="numberOfImagesSlider" destination="S5g-Vu-Fqq" id="BUI-kK-chX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZq-oG-Ich" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-331" y="507"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GCb-vO-pxy">
+            <objects>
+                <tabBarController id="dSu-3o-tqf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="f9t-X9-Ngf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="0ON-0A-PSz"/>
+                        <segue destination="YMX-tR-hVz" kind="relationship" relationship="viewControllers" id="D2N-Bn-pZ4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4m-JK-boY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1151" y="129"/>
+        </scene>
+        <!--DrawView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="DrawView" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,14 +95,68 @@
                                             <constraint firstAttribute="width" constant="64" id="oX9-cr-1wL"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-dB-qaJ" userLabel="Faces">
+                                        <rect key="frame" x="0.0" y="436" width="600" height="116"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Que-I9-CQL" userLabel="Left">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="116"/>
+                                            </view>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZm-XR-W2x" userLabel="BTN Fede">
+                                                <rect key="frame" x="305" y="0.0" width="116" height="116"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="iZm-XR-W2x" secondAttribute="height" multiplier="1:1" id="QG3-CM-0FK"/>
+                                                </constraints>
+                                                <state key="normal" image="btn_fede.png"/>
+                                                <connections>
+                                                    <action selector="changeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ap0-wF-XjL"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddA-uI-SE0" userLabel="Right">
+                                                <rect key="frame" x="421" y="0.0" width="179" height="116"/>
+                                            </view>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMS-eZ-5M6" userLabel="BTN Luca">
+                                                <rect key="frame" x="179" y="0.0" width="116" height="116"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fMS-eZ-5M6" secondAttribute="height" multiplier="1:1" id="3iG-he-lIP"/>
+                                                </constraints>
+                                                <state key="normal" image="btn_luca.png"/>
+                                                <variation key="heightClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="181" y="0.0" width="116" height="116"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="changeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BS3-Rg-mGC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ddA-uI-SE0" firstAttribute="leading" secondItem="iZm-XR-W2x" secondAttribute="trailing" id="2x7-Qf-Ou0"/>
+                                            <constraint firstItem="ddA-uI-SE0" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="4OU-EB-Bgs"/>
+                                            <constraint firstItem="Que-I9-CQL" firstAttribute="trailing" secondItem="fMS-eZ-5M6" secondAttribute="leading" id="9mV-3D-zC8"/>
+                                            <constraint firstItem="Que-I9-CQL" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="I4A-FJ-WC4"/>
+                                            <constraint firstAttribute="trailing" secondItem="ddA-uI-SE0" secondAttribute="trailing" id="INl-Po-2Cn"/>
+                                            <constraint firstItem="Que-I9-CQL" firstAttribute="leading" secondItem="Lvf-dB-qaJ" secondAttribute="leading" id="SRO-IO-nZ8"/>
+                                            <constraint firstItem="fMS-eZ-5M6" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="WWe-Tv-klJ"/>
+                                            <constraint firstItem="fMS-eZ-5M6" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="XrR-mb-2Pf"/>
+                                            <constraint firstItem="Que-I9-CQL" firstAttribute="width" secondItem="ddA-uI-SE0" secondAttribute="width" id="a44-sm-Gjk"/>
+                                            <constraint firstItem="iZm-XR-W2x" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="agF-9h-INW"/>
+                                            <constraint firstItem="Que-I9-CQL" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="bCM-kl-3TH"/>
+                                            <constraint firstItem="ddA-uI-SE0" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="dCn-Gz-jzy"/>
+                                            <constraint firstItem="iZm-XR-W2x" firstAttribute="leading" secondItem="fMS-eZ-5M6" secondAttribute="trailing" constant="10" id="eeG-1Y-18v"/>
+                                            <constraint firstItem="iZm-XR-W2x" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="f5v-Um-WuD"/>
+                                            <constraint firstAttribute="height" constant="116" id="t8b-jG-FaV"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="KDM-dO-iFV" firstAttribute="centerY" secondItem="UsL-Uq-jgG" secondAttribute="centerY" id="B1a-ej-Uuu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lvf-dB-qaJ" secondAttribute="bottom" constant="48" id="I2f-TI-ygU"/>
                                     <constraint firstItem="vMQ-L1-Hoy" firstAttribute="height" secondItem="UsL-Uq-jgG" secondAttribute="height" id="Qgt-TA-yKc"/>
+                                    <constraint firstItem="Lvf-dB-qaJ" firstAttribute="trailing" secondItem="vMQ-L1-Hoy" secondAttribute="trailing" id="Vy8-Vg-vw1"/>
                                     <constraint firstItem="vMQ-L1-Hoy" firstAttribute="width" secondItem="UsL-Uq-jgG" secondAttribute="width" id="ZPd-iP-heX"/>
                                     <constraint firstItem="KDM-dO-iFV" firstAttribute="centerX" secondItem="UsL-Uq-jgG" secondAttribute="centerX" id="k53-Uz-VGy"/>
                                     <constraint firstItem="vMQ-L1-Hoy" firstAttribute="centerX" secondItem="UsL-Uq-jgG" secondAttribute="centerX" id="tMo-Xs-QeS"/>
                                     <constraint firstItem="vMQ-L1-Hoy" firstAttribute="centerY" secondItem="UsL-Uq-jgG" secondAttribute="centerY" id="xuh-Q9-Tjc"/>
+                                    <constraint firstItem="Lvf-dB-qaJ" firstAttribute="leading" secondItem="vMQ-L1-Hoy" secondAttribute="leading" id="zGG-XK-qOW"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disegna con il dito" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="RxR-V4-c7x">
@@ -56,57 +173,6 @@
                                     <rect key="frame" x="220" y="371" width="360" height="58"/>
                                 </variation>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-dB-qaJ" userLabel="Faces">
-                                <rect key="frame" x="0.0" y="468" width="600" height="116"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Que-I9-CQL" userLabel="Left">
-                                        <rect key="frame" x="0.0" y="0.0" width="179" height="116"/>
-                                    </view>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZm-XR-W2x" userLabel="BTN Fede">
-                                        <rect key="frame" x="305" y="0.0" width="116" height="116"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="iZm-XR-W2x" secondAttribute="height" multiplier="1:1" id="QG3-CM-0FK"/>
-                                        </constraints>
-                                        <state key="normal" image="btn_fede.png"/>
-                                        <connections>
-                                            <action selector="changeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ap0-wF-XjL"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddA-uI-SE0" userLabel="Right">
-                                        <rect key="frame" x="421" y="0.0" width="179" height="116"/>
-                                    </view>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMS-eZ-5M6" userLabel="BTN Luca">
-                                        <rect key="frame" x="179" y="0.0" width="116" height="116"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="fMS-eZ-5M6" secondAttribute="height" multiplier="1:1" id="3iG-he-lIP"/>
-                                        </constraints>
-                                        <state key="normal" image="btn_luca.png"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="181" y="0.0" width="116" height="116"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="changeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BS3-Rg-mGC"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ddA-uI-SE0" firstAttribute="leading" secondItem="iZm-XR-W2x" secondAttribute="trailing" id="2x7-Qf-Ou0"/>
-                                    <constraint firstItem="ddA-uI-SE0" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="4OU-EB-Bgs"/>
-                                    <constraint firstItem="Que-I9-CQL" firstAttribute="trailing" secondItem="fMS-eZ-5M6" secondAttribute="leading" id="9mV-3D-zC8"/>
-                                    <constraint firstItem="Que-I9-CQL" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="I4A-FJ-WC4"/>
-                                    <constraint firstAttribute="trailing" secondItem="ddA-uI-SE0" secondAttribute="trailing" id="INl-Po-2Cn"/>
-                                    <constraint firstItem="Que-I9-CQL" firstAttribute="leading" secondItem="Lvf-dB-qaJ" secondAttribute="leading" id="SRO-IO-nZ8"/>
-                                    <constraint firstItem="fMS-eZ-5M6" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="WWe-Tv-klJ"/>
-                                    <constraint firstItem="fMS-eZ-5M6" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="XrR-mb-2Pf"/>
-                                    <constraint firstItem="Que-I9-CQL" firstAttribute="width" secondItem="ddA-uI-SE0" secondAttribute="width" id="a44-sm-Gjk"/>
-                                    <constraint firstItem="iZm-XR-W2x" firstAttribute="height" secondItem="Lvf-dB-qaJ" secondAttribute="height" id="agF-9h-INW"/>
-                                    <constraint firstItem="Que-I9-CQL" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="bCM-kl-3TH"/>
-                                    <constraint firstItem="ddA-uI-SE0" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="dCn-Gz-jzy"/>
-                                    <constraint firstItem="iZm-XR-W2x" firstAttribute="leading" secondItem="fMS-eZ-5M6" secondAttribute="trailing" constant="10" id="eeG-1Y-18v"/>
-                                    <constraint firstItem="iZm-XR-W2x" firstAttribute="centerY" secondItem="Lvf-dB-qaJ" secondAttribute="centerY" id="f5v-Um-WuD"/>
-                                    <constraint firstAttribute="height" constant="116" id="t8b-jG-FaV"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5c-cY-V8m" userLabel="Trash">
                                 <rect key="frame" x="560" y="20" width="32" height="43"/>
                                 <constraints>
@@ -138,16 +204,13 @@
                             <constraint firstItem="3Nd-I9-22G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ece-Bc-qou"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RxR-V4-c7x" secondAttribute="leading" id="Ekl-aJ-NCn"/>
                             <constraint firstItem="3Nd-I9-22G" firstAttribute="height" secondItem="R5c-cY-V8m" secondAttribute="height" id="Fzb-DL-4Ij"/>
-                            <constraint firstItem="Lvf-dB-qaJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="R1p-6k-GxV"/>
                             <constraint firstItem="3Nd-I9-22G" firstAttribute="centerY" secondItem="R5c-cY-V8m" secondAttribute="centerY" id="SZF-ZC-JfK"/>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TZL-hW-4YK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RxR-V4-c7x" secondAttribute="trailingMargin" id="X1I-Wp-JRm"/>
                             <constraint firstItem="R5c-cY-V8m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fkt-d2-Uk2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lvf-dB-qaJ" secondAttribute="bottom" constant="16" id="fr0-gS-b1F"/>
                             <constraint firstItem="UsL-Uq-jgG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="iyz-NV-okd"/>
                             <constraint firstItem="RxR-V4-c7x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lwN-o1-mzn"/>
                             <constraint firstAttribute="trailing" secondItem="R5c-cY-V8m" secondAttribute="trailing" constant="8" id="rD3-3h-tFZ"/>
-                            <constraint firstItem="Lvf-dB-qaJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zMQ-pi-D1a"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -155,6 +218,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="EasyStriscia" image="draw.png" id="o9V-j1-up3"/>
                     <connections>
                         <outlet property="explainationLabel" destination="RxR-V4-c7x" id="ubb-wV-Eqm"/>
                         <outlet property="icon" destination="KDM-dO-iFV" id="k5b-k2-XxZ"/>
@@ -165,14 +229,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="553"/>
+            <point key="canvasLocation" x="-331" y="-245"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Luca.png" width="149" height="180"/>
+        <image name="Luca.png" width="150" height="150"/>
         <image name="Trash.png" width="64" height="85"/>
+        <image name="bezier.png" width="40" height="40"/>
         <image name="btn_fede.png" width="232" height="232"/>
         <image name="btn_luca.png" width="232" height="232"/>
+        <image name="draw.png" width="40" height="40"/>
         <image name="share.png" width="38" height="53"/>
     </resources>
 </document>
